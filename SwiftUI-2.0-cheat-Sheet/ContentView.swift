@@ -62,25 +62,25 @@ struct ContentView: View {
 }
 
 // 1. 创建一个ViewModifier
-struct DismissKeyboardOnReturn: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .introspectTextField { textField in
-                let keyCommand = UIKeyCommand((UIKeyCommand.inputReturn),
-                                              action: #selector(UIResponder.resignFirstResponder))
-                textField.addKeyCommand(keyCommand)
-            }
-    }
-}
-
-
-extension View {
-    
-    func dismissKeyboardOnReturn() -> some View {
-        
-        self.modifier(dismissKeyboardOnReturn())
-    }
-}
+//struct DismissKeyboardOnReturn: ViewModifier {
+//    func body(content: Content) -> some View {
+//        content
+//            .introspectTextField { textField in
+//                let keyCommand = UIKeyCommand((UIKeyCommand.inputReturn),
+//                                              action: #selector(UIResponder.resignFirstResponder))
+//                textField.addKeyCommand(keyCommand)
+//            }
+//    }
+//}
+//
+//
+//extension View {
+//
+//    func dismissKeyboardOnReturn() -> some View {
+//
+//        self.modifier(dismissKeyboardOnReturn())
+//    }
+//}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
